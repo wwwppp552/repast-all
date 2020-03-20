@@ -1,7 +1,9 @@
 package com.aaa.lee.repast.mapper;
 
 import com.aaa.lee.repast.model.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
 import tk.mybatis.mapper.common.Mapper;
+
 
 public interface MemberMapper extends Mapper<Member> {
 

@@ -1,13 +1,14 @@
 package com.aaa.lee.repast.fallback;
 
 import com.aaa.lee.repast.base.ResultData;
-import com.aaa.lee.repast.model.Member;
-import com.aaa.lee.repast.model.MemberReceiveAddress;
+import com.aaa.lee.repast.model.*;
 import com.aaa.lee.repast.service.IRepastService;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -62,6 +63,53 @@ public class RepastFallBackFactory implements FallbackFactory<IRepastService> {
             public ResultData delAdders(Long id) {
                 return null;
             }
+
+            @Override
+            public ResultData addShop(ShopCollecion shopCollecion) {
+                return null;
+            }
+
+            @Override
+            public List<ShopCollecion> selectShopCollection() {
+                return null;
+            }
+
+            @Override
+            public ResultData deleteShop(ShopCollecion shopCollecion) {
+                return null;
+            }
+
+            @Override
+            public List<HashMap> selectCommentAndReply(Integer memberId) {
+                return null;
+            }
+
+            @Override
+            public ResultData updateShowStatus(Long commentId) {
+                return null;
+            }
+
+            @Override
+            public ResultData insertComment(Comment comment) {
+                return null;
+            }
+
+            @Override
+            public ResultData addProductCollection(ProductCollection productCollection) {
+                return null;
+            }
+
+            @Override
+            public List<ProductCollection> selectProductCollection(ProductCollection productCollection) {
+                return null;
+            }
+
+            @Override
+            public ResultData deleteProductCollection(ProductCollection p) {
+                return null;
+            }
+
+
         };
         return repastService;
     }

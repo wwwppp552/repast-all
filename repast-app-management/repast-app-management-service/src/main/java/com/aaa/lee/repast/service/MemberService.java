@@ -6,6 +6,7 @@ import com.aaa.lee.repast.model.Member;
 import com.aaa.lee.repast.utils.IDUtil;
 import com.aaa.lee.repast.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.common.Mapper;
 

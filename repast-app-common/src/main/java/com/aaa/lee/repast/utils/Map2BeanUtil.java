@@ -32,7 +32,7 @@ public class Map2BeanUtil {
      * @date 2020/3/12
      * @return T
      * @throws
-    **/
+     **/
     public static <T> T map2Bean(Map<String, Object> map, Class<T> clazz) {
         // 每一个实体对象都会有一个Class对象
         // T instance = clazz.newInstance();// 通过java自带的--->有可能是一个null对象(空指针异常)
@@ -78,7 +78,7 @@ public class Map2BeanUtil {
      * @date 2020/3/12
      * @return java.lang.String
      * @throws
-    **/
+     **/
     private static String getSetMethodName(String filedName) {
         STRING_BUILDER.setLength(0);
         // name -->> setName
@@ -93,7 +93,7 @@ public class Map2BeanUtil {
      * @date 2020/3/12
      * @return java.lang.String
      * @throws
-    **/
+     **/
     private static String firstToUpperCase(String str) {
         // setName();-->set N要大写(并不确定在Map中N是否大写--->所以统一转换)
         return str.substring(0,1).toUpperCase() + str.substring(1, str.length());
